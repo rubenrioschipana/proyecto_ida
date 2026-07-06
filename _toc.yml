@@ -1,0 +1,23 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: 1_generalidades
+- file: 2_antecedentes
+- file: 3_resumen
+- file: 4_informe_solicitud
+- file: 5_poblacion_d
+- file: 6_caudales_d
+- file: 7_ptap_y_captacion_de_fondo
+- file: 8_conduccion
+- file: 9_tanque
+- file: 10_aduccion
+- file: 11_red
+- file: 12_riesgos
+- file: 13_conclusiones
+- file: 14_recomendaciones
+- file: 15_referencias
+- file: 16_calculos
+- file: 17_planos

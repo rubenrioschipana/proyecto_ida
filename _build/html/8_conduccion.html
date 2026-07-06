@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio &#8212; Proyecto IDA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '8_conduccion';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="9. Diseño del tanque de almacenamiento (reservorio)" href="9_tanque.html" />
+    <link rel="prev" title="7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)" href="7_ptap_y_captacion_de_fondo.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_utec.png" class="logo__image only-light" alt="Proyecto IDA - Home"/>
+    <img src="_static/logo_utec.png" class="logo__image only-dark pst-js-only" alt="Proyecto IDA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    UNIVERSIDAD DE INGENIERÍA Y TECNOLOGÍA (UTEC)
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_generalidades.html">1. Generalidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_antecedentes.html">2. Antecedentes del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_resumen.html">3. Resumen del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_informe_solicitud.html">4. Informe de solicitud de licencia de uso de agua para el proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_poblacion_d.html">5. Población de diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_caudales_d.html">6. Caudales de diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_ptap_y_captacion_de_fondo.html">7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_tanque.html">9. Diseño del tanque de almacenamiento (reservorio)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_aduccion.html">10. Diseño de la Línea de Aducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_red.html">11. Redes de distribución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_riesgos.html">12. Descripción de riesgos naturales asociados al sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_conclusiones.html">13. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_recomendaciones.html">14. Recomendaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_referencias.html">15. Referencias bibliográficas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_calculos.html">16. Memoria de Calculo Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_planos.html">17. Planos</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F8_conduccion.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/8_conduccion.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-diseno">8.1. Criterios de diseño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen-comparativo-lc1-la-pena-lc2-los-chimbiles">8.2. Resumen comparativo LC1 (La Peña) – LC2 (Los Chimbiles)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linea-de-conduccion-lc1-la-pena-platanar">8.3. Línea de conducción LC1 (La Peña / Platanar)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linea-de-conduccion-lc2-los-chimbiles">8.4. Línea de conducción LC2 (Los Chimbiles)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verificaciones">8.5. Verificaciones</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="diseno-de-la-linea-de-conduccion-1-y-2-la-pena-y-los-chimbiles-hacia-el-reservorio">
+<h1>8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio<a class="headerlink" href="#diseno-de-la-linea-de-conduccion-1-y-2-la-pena-y-los-chimbiles-hacia-el-reservorio" title="Link to this heading">#</a></h1>
+<p>La línea de conducción transporta el agua desde la obra de captación hasta el reservorio de almacenamiento. Su diseño busca garantizar que el caudal de diseño (<span class="math notranslate nohighlight">\(Q_{md}\)</span>) llegue al reservorio aprovechando la energía disponible por gravedad, sin que las presiones superen la capacidad resistente de la tubería ni las velocidades salgan del rango admisible. La conducción se resuelve mediante <strong>dos líneas independientes</strong>: <strong>LC1</strong>, proveniente de la captación <strong>La Peña / Platanar</strong> (10.00 L/s), y <strong>LC2</strong>, proveniente de la captación <strong>Los Chimbiles</strong> (5.36 L/s). En conjunto transportan el caudal máximo diario hacia el reservorio: <span class="math notranslate nohighlight">\(10.00 + 5.36 = 15.36 \ \text{L/s} \approx Q_{md}\)</span>.</p>
+<section id="criterios-de-diseno">
+<h2>8.1. Criterios de diseño<a class="headerlink" href="#criterios-de-diseno" title="Link to this heading">#</a></h2>
+<p>Ambas líneas se proyectan en <strong>tubería de PVC</strong>, material de baja rugosidad, buena resistencia a la presión y costo competitivo. Los criterios aplicados son:</p>
+<p><strong>1. Carga estática disponible (<span class="math notranslate nohighlight">\(H_t\)</span>).</strong> Diferencia de cotas entre el inicio (captación) y la cota más baja del trazo; representa la energía potencial máxima disponible para vencer las pérdidas y entregar el agua al reservorio:</p>
+<div class="math notranslate nohighlight">
+\[ H_{t} = Z_{inicio} - Z_{m\acute{i}n} \]</div>
+<p><strong>2. Presión de diseño (<span class="math notranslate nohighlight">\(P_d\)</span>).</strong> La condición más exigente ocurre cuando el flujo se detiene (condición estática). Para seleccionar la clase de tubería se afecta la carga estática máxima por un factor de seguridad de 1.2:</p>
+<div class="math notranslate nohighlight">
+\[ P_{d} = 1.2 \cdot H_{t} \]</div>
+<p><strong>3. Velocidades admisibles (RNE).</strong> <span class="math notranslate nohighlight">\(V_{m\acute{i}n} = 0.6\)</span> m/s y <span class="math notranslate nohighlight">\(V_{m\acute{a}x} = 3.0\)</span> m/s para PVC. El límite inferior evita la <strong>sedimentación</strong>; el superior previene la <strong>erosión</strong> y limita el golpe de ariete. El diámetro teórico se obtiene de la ecuación de continuidad:</p>
+<div class="math notranslate nohighlight">
+\[ D = \sqrt{\dfrac{4\,Q}{\pi\,V}} \]</div>
+<p><strong>4. Pérdida de carga (Hazen-Williams).</strong> Con coeficiente <span class="math notranslate nohighlight">\(C = 150\)</span> para PVC:</p>
+<div class="math notranslate nohighlight">
+\[ h_{f} = \dfrac{10.674 \cdot L \cdot Q^{1.852}}{C^{1.852} \cdot D^{4.871}} \]</div>
+<p>El diseño es satisfactorio cuando la pérdida de carga total es menor que la carga disponible (<span class="math notranslate nohighlight">\(h_{f} &lt; H_{t}\)</span>) y la velocidad se mantiene dentro del rango admisible.</p>
+</section>
+<section id="resumen-comparativo-lc1-la-pena-lc2-los-chimbiles">
+<h2>8.2. Resumen comparativo LC1 (La Peña) – LC2 (Los Chimbiles)<a class="headerlink" href="#resumen-comparativo-lc1-la-pena-lc2-los-chimbiles" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Parámetro</p></th>
+<th class="head text-center"><p>LC1 — La Peña / Platanar</p></th>
+<th class="head text-center"><p>LC2 — Los Chimbiles</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Caudal de diseño, Qmd (L/s)</p></td>
+<td class="text-center"><p>10.00</p></td>
+<td class="text-center"><p>5.36</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Cota inicial (m s.n.m.)</p></td>
+<td class="text-center"><p>1505.739</p></td>
+<td class="text-center"><p>1481.059</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Cota final (m s.n.m.)</p></td>
+<td class="text-center"><p>1390.747</p></td>
+<td class="text-center"><p>1390.983</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Carga total disponible, Ht (m)</p></td>
+<td class="text-center"><p>114.99</p></td>
+<td class="text-center"><p>90.08</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Presión de diseño, Pd (mca)</p></td>
+<td class="text-center"><p>171.34</p></td>
+<td class="text-center"><p>108.09</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Presión de diseño (bar)</p></td>
+<td class="text-center"><p>17.48</p></td>
+<td class="text-center"><p>11.03</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Clase de tubería</p></td>
+<td class="text-center"><p>Clase 20 – Serie 5 (PN20)</p></td>
+<td class="text-center"><p>Clase 12.5 – Serie 8 (PN12.5)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Diámetro adoptado</p></td>
+<td class="text-center"><p>3½″ (88.9 mm)</p></td>
+<td class="text-center"><p>3″ (76.2 mm)</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Coeficiente Hazen-Williams, C</p></td>
+<td class="text-center"><p>150</p></td>
+<td class="text-center"><p>150</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Longitud, L (m)</p></td>
+<td class="text-center"><p>2 937.96</p></td>
+<td class="text-center"><p>1 206.11</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Pérdida de carga, Hf (m)</p></td>
+<td class="text-center"><p>76.21</p></td>
+<td class="text-center"><p>20.89</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Velocidad, V (m/s)</p></td>
+<td class="text-center"><p>1.61</p></td>
+<td class="text-center"><p>1.18</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Tabla 8.1. Parámetros de diseño de las líneas de conducción.</em></p>
+</section>
+<section id="linea-de-conduccion-lc1-la-pena-platanar">
+<h2>8.3. Línea de conducción LC1 (La Peña / Platanar)<a class="headerlink" href="#linea-de-conduccion-lc1-la-pena-platanar" title="Link to this heading">#</a></h2>
+<p>La línea <strong>LC1</strong> es la de mayor longitud y caudal del sistema. Transporta <strong>10.00 L/s</strong> desde la cota 1 505.739 m s. n. m. hasta el reservorio (1 390.747 m s. n. m.), a lo largo de <strong>2 937.96 m</strong>. La cota más baja del recorrido (1 362.958 m s. n. m.) define una carga estática disponible de <span class="math notranslate nohighlight">\(H_{t} = 114.99\)</span> m y una presión de diseño de <span class="math notranslate nohighlight">\(P_{d} = 171.34\)</span> mca (17.48 bar), por lo que se adopta <strong>tubería PVC clase 20 (PN20)</strong>, cuya presión nominal de 20 bar resiste con holgura la presión de diseño.</p>
+<p>El rango de diámetros teóricos para las velocidades admisibles es de 2.56″ a 5.74″; se adopta el diámetro comercial <strong>3½″ (88.9 mm)</strong>. Con <span class="math notranslate nohighlight">\(C = 150\)</span> y la longitud del trazo, la pérdida de carga resulta <span class="math notranslate nohighlight">\(h_{f} = 76.21\)</span> m, inferior a la carga disponible, por lo que existe energía suficiente para conducir el agua al reservorio. La velocidad es <span class="math notranslate nohighlight">\(V = 1.61\)</span> m/s, dentro del rango admisible. La línea, por tanto, <strong>cumple</strong>.</p>
+<div align="center">
+  <img src="Cascas_fig2_lgh_LC1.png" width="600"><br>
+  <em><strong>Figura 8.1.</strong> LC1 (La Peña) — Perfil del terreno, línea de gradiente hidráulica (L.G.H.) y línea estática. La presión dinámica máxima (≈ 70.6 mca) se mantiene por debajo de la presión nominal de la tubería clase 20 (≈ 200 mca).</em>
+</div>
+<p>La distancia vertical entre la L.G.H. y el terreno equivale a la <strong>presión disponible</strong> en cada punto: a medida que el terreno desciende, la presión interna aumenta. La presión dinámica máxima a lo largo de LC1 es del orden de 70.6 mca, muy inferior a la presión nominal de la tubería, por lo que la conducción opera con un amplio margen de seguridad estructural.</p>
+</section>
+<section id="linea-de-conduccion-lc2-los-chimbiles">
+<h2>8.4. Línea de conducción LC2 (Los Chimbiles)<a class="headerlink" href="#linea-de-conduccion-lc2-los-chimbiles" title="Link to this heading">#</a></h2>
+<p>La línea <strong>LC2</strong> transporta <strong>5.36 L/s</strong> desde la cota 1 481.059 m s. n. m. hasta la cota 1 390.983 m s. n. m., a lo largo de <strong>1 206.11 m</strong>. La carga estática disponible es <span class="math notranslate nohighlight">\(H_{t} = 90.08\)</span> m, de la que resulta una presión de diseño de <span class="math notranslate nohighlight">\(P_{d} = 108.09\)</span> mca (11.03 bar); se adopta <strong>tubería PVC clase 12.5 (PN12.5)</strong>, solución más económica adecuada a la menor presión.</p>
+<p>El rango de diámetros teóricos es de 1.88″ a 4.20″; se adopta el diámetro comercial <strong>3″ (76.2 mm)</strong>. Con <span class="math notranslate nohighlight">\(C = 150\)</span> y la longitud del trazo, la pérdida de carga es <span class="math notranslate nohighlight">\(h_{f} = 20.89\)</span> m, muy por debajo de la carga disponible, y la velocidad es <span class="math notranslate nohighlight">\(V = 1.18\)</span> m/s, admisible. La línea <strong>cumple</strong>.</p>
+<div align="center">
+  <img src="Cascas_fig3_lgh_LC2.png" width="600"><br>
+  <em><strong>Figura 8.2.</strong> LC2 (Los Chimbiles) — Perfil del terreno, línea de gradiente hidráulica (L.G.H.) y línea estática. La presión dinámica máxima (≈ 69.2 mca) se mantiene por debajo de la presión nominal de la tubería clase 12.5 (≈ 125 mca).</em>
+</div>
+<p>La L.G.H. se mantiene por encima del terreno en todo el recorrido, lo que confirma que no existen presiones negativas que pudieran provocar el ingreso de aire o el colapso de la tubería.</p>
+</section>
+<section id="verificaciones">
+<h2>8.5. Verificaciones<a class="headerlink" href="#verificaciones" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Verificación</p></th>
+<th class="head text-center"><p>LC1 (La Peña)</p></th>
+<th class="head text-center"><p>LC2 (Los Chimbiles)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Pérdida de carga: Hf &lt; Ht</p></td>
+<td class="text-center"><p>76.21 &lt; 114.99 ✓</p></td>
+<td class="text-center"><p>20.89 &lt; 90.08 ✓</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Velocidad: 0.6 ≤ V ≤ 3.0 m/s</p></td>
+<td class="text-center"><p>1.61 m/s ✓</p></td>
+<td class="text-center"><p>1.18 m/s ✓</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Presión dinámica máx. &lt; presión nominal</p></td>
+<td class="text-center"><p>≈ 70.6 &lt; 200 mca ✓</p></td>
+<td class="text-center"><p>≈ 69.2 &lt; 125 mca ✓</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Tabla 8.2. Verificaciones hidráulicas de las líneas de conducción.</em></p>
+<p>El cálculo de la línea de gradiente hidráulica, desarrollado tramo a tramo para las 61 progresivas de LC1 y las 16 de LC2, confirma que las presiones dinámicas máximas quedan por debajo de la presión nominal de la clase de tubería seleccionada en cada caso. Ambas líneas satisfacen simultáneamente las exigencias hidráulicas (energía suficiente y velocidades admisibles) y estructurales (resistencia a la presión).</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="7_ptap_y_captacion_de_fondo.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="9_tanque.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">9. Diseño del tanque de almacenamiento (reservorio)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-diseno">8.1. Criterios de diseño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resumen-comparativo-lc1-la-pena-lc2-los-chimbiles">8.2. Resumen comparativo LC1 (La Peña) – LC2 (Los Chimbiles)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linea-de-conduccion-lc1-la-pena-platanar">8.3. Línea de conducción LC1 (La Peña / Platanar)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#linea-de-conduccion-lc2-los-chimbiles">8.4. Línea de conducción LC2 (Los Chimbiles)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verificaciones">8.5. Verificaciones</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ruben Rios
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>9. Diseño del tanque de almacenamiento (reservorio) &#8212; Proyecto IDA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '9_tanque';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="10. Diseño de la Línea de Aducción" href="10_aduccion.html" />
+    <link rel="prev" title="8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio" href="8_conduccion.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_utec.png" class="logo__image only-light" alt="Proyecto IDA - Home"/>
+    <img src="_static/logo_utec.png" class="logo__image only-dark pst-js-only" alt="Proyecto IDA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    UNIVERSIDAD DE INGENIERÍA Y TECNOLOGÍA (UTEC)
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_generalidades.html">1. Generalidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_antecedentes.html">2. Antecedentes del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_resumen.html">3. Resumen del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_informe_solicitud.html">4. Informe de solicitud de licencia de uso de agua para el proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_poblacion_d.html">5. Población de diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_caudales_d.html">6. Caudales de diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_ptap_y_captacion_de_fondo.html">7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_conduccion.html">8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. Diseño del tanque de almacenamiento (reservorio)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_aduccion.html">10. Diseño de la Línea de Aducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_red.html">11. Redes de distribución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_riesgos.html">12. Descripción de riesgos naturales asociados al sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_conclusiones.html">13. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_recomendaciones.html">14. Recomendaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_referencias.html">15. Referencias bibliográficas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_calculos.html">16. Memoria de Calculo Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_planos.html">17. Planos</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F9_tanque.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/9_tanque.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>9. Diseño del tanque de almacenamiento (reservorio)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalidades-y-filosofia-de-diseno">9.1. Generalidades y filosofía de diseño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-de-regulacion-y-marco-normativo">9.2. Volumen de regulación y marco normativo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predimensionamiento-geometrico-y-consideraciones-estructurales">9.3. Predimensionamiento geométrico y consideraciones estructurales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionamiento-hidraulico-de-tuberias-y-accesorios">9.4. Dimensionamiento hidráulico de tuberías y accesorios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuberias-principales-entrada-y-salida">9.4.1. Tuberías principales (entrada y salida)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuberia-de-limpia-y-drenaje">9.4.2. Tubería de limpia y drenaje</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuberia-de-rebose">9.4.3. Tubería de rebose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#canastilla-de-succion">9.4.4. Canastilla de succión</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistema-de-desinfeccion-y-obras-civiles-complementarias">9.5. Sistema de desinfección y obras civiles complementarias</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="diseno-del-tanque-de-almacenamiento-reservorio">
+<h1>9. Diseño del tanque de almacenamiento (reservorio)<a class="headerlink" href="#diseno-del-tanque-de-almacenamiento-reservorio" title="Link to this heading">#</a></h1>
+<section id="generalidades-y-filosofia-de-diseno">
+<h2>9.1. Generalidades y filosofía de diseño<a class="headerlink" href="#generalidades-y-filosofia-de-diseno" title="Link to this heading">#</a></h2>
+<p>El presente diseño corresponde a la unidad de almacenamiento del sistema. Conforme a la filosofía de operación por gravedad del proyecto, el reservorio no requiere sistemas de bombeo, lo que reduce significativamente los costos operativos y de mantenimiento electromecánico para la junta administradora local.</p>
+</section>
+<section id="volumen-de-regulacion-y-marco-normativo">
+<h2>9.2. Volumen de regulación y marco normativo<a class="headerlink" href="#volumen-de-regulacion-y-marco-normativo" title="Link to this heading">#</a></h2>
+<p>El volumen del reservorio tiene la función primordial de compensar las variaciones horarias del consumo a lo largo del día, almacenando agua en los momentos de bajo consumo y liberándola durante las horas punta.</p>
+<p>En cumplimiento del <strong>RNE, Norma Técnica OS.030 (Almacenamiento de Agua para Consumo Humano)</strong>, el cálculo del volumen de regulación suele realizarse mediante un diagrama de masa fundamentado en las variaciones horarias. Sin embargo, para localidades donde no se dispone de registros hidrométricos horarios fiables, la normativa exige que el volumen de regulación sea equivalente, como mínimo, al 25 % del volumen promedio diario anual. Con un caudal promedio de diseño (<span class="math notranslate nohighlight">\(Q_m\)</span>) de 11.82 L/s (equivalente a 1 021.25 m³/día):</p>
+<div class="math notranslate nohighlight">
+\[ V_{reg} = 0.25 \times Q_m \times \left( \frac{86\,400}{1000} \right) = 0.25 \times 1\,021.25 = 255.31 \, \text{m}^3 \]</div>
+<p>Para garantizar la resiliencia operativa del sistema, compensar eventuales emergencias y adaptarse a volúmenes comerciales estandarizados, se ha adoptado un reservorio de <strong>300 m³</strong>.</p>
+</section>
+<section id="predimensionamiento-geometrico-y-consideraciones-estructurales">
+<h2>9.3. Predimensionamiento geométrico y consideraciones estructurales<a class="headerlink" href="#predimensionamiento-geometrico-y-consideraciones-estructurales" title="Link to this heading">#</a></h2>
+<p>Se ha proyectado un reservorio de tipo apoyado y sección transversal circular, construido en concreto armado. La geometría circular distribuye las presiones hidrostáticas de manera uniforme en forma de esfuerzos de tracción anular, optimizando la cuantía de acero requerida.</p>
+<p>De acuerdo con las restricciones del área del proyecto y buscando optimizar el área de excavación en plataforma, se ha establecido una altura útil de agua (<span class="math notranslate nohighlight">\(h_1\)</span>) de 6.50 m. Adicionalmente, la Norma OS.030 exige prever una cámara de aire en la parte superior para permitir la fluctuación libre de la lámina de agua y la ventilación, por lo que se ha asignado un borde libre (<span class="math notranslate nohighlight">\(h_2\)</span>) de 0.30 m, definiendo una altura total del muro interior de 6.80 m. Con base en el volumen adoptado y la altura útil, las dimensiones internas son:</p>
+<div class="math notranslate nohighlight">
+\[ A = \frac{300}{6.50} = 46.15 \, \text{m}^2 \]</div>
+<div class="math notranslate nohighlight">
+\[ D = \sqrt{\frac{4 \cdot 46.15}{\pi}} = 7.67 \, \text{m} \rightarrow \text{se adopta constructivamente } 7.70 \, \text{m} \]</div>
+</section>
+<section id="dimensionamiento-hidraulico-de-tuberias-y-accesorios">
+<h2>9.4. Dimensionamiento hidráulico de tuberías y accesorios<a class="headerlink" href="#dimensionamiento-hidraulico-de-tuberias-y-accesorios" title="Link to this heading">#</a></h2>
+<p>Las líneas que interactúan con el reservorio se han dimensionado garantizando velocidades de flujo (asumidas en <span class="math notranslate nohighlight">\(V = 1.5\)</span> m/s) que eviten la sedimentación o el desgaste por abrasión.</p>
+<section id="tuberias-principales-entrada-y-salida">
+<h3>9.4.1. Tuberías principales (entrada y salida)<a class="headerlink" href="#tuberias-principales-entrada-y-salida" title="Link to this heading">#</a></h3>
+<p>La línea de entrada, encargada de surtir al tanque, se dimensionó con el Caudal Máximo Diario (<span class="math notranslate nohighlight">\(Q_{md} = 15.36\)</span> L/s), resultando en un diámetro teórico de 4.50″. La línea de aducción (salida hacia la red) debe suministrar el Caudal Máximo Horario (<span class="math notranslate nohighlight">\(Q_{mh} = 23.64\)</span> L/s), requiriendo un diámetro teórico de 5.58″. En busca de una estandarización constructiva que facilite la instalación y la provisión de válvulas de paso, <strong>se ha adoptado tubería de PVC de 6″ para ambas líneas</strong>.</p>
+</section>
+<section id="tuberia-de-limpia-y-drenaje">
+<h3>9.4.2. Tubería de limpia y drenaje<a class="headerlink" href="#tuberia-de-limpia-y-drenaje" title="Link to this heading">#</a></h3>
+<p>La Norma OS.030 exige que todo reservorio cuente con una facilidad de drenaje en el fondo, capaz de evacuar el volumen total en un máximo de 2 horas (7 200 s). Aplicando la ecuación de vaciado de Torricelli con un coeficiente de descarga <span class="math notranslate nohighlight">\(C_d = 0.60\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[ A_t = \frac{2 \cdot 46.15 \cdot \sqrt{6.50}}{0.60 \cdot 7\,200 \cdot \sqrt{19.62}} = 0.0123 \, \text{m}^2 \]</div>
+<p>El área calculada arroja un diámetro teórico de 4.93″. Para garantizar el margen de seguridad y estandarizar con las demás líneas, <strong>se adopta una tubería de PVC de 6″</strong>.</p>
+</section>
+<section id="tuberia-de-rebose">
+<h3>9.4.3. Tubería de rebose<a class="headerlink" href="#tuberia-de-rebose" title="Link to this heading">#</a></h3>
+<p>Como medida de salvaguarda ante fallas en la válvula flotadora de entrada, la tubería de rebose se diseña para evacuar todo el caudal que ingresa (<span class="math notranslate nohighlight">\(Q_{md}\)</span>). Asumiendo una carga hidráulica sobre la embocadura de 0.05 m, se obtiene un requerimiento teórico de 3.76″. <strong>Se ha adoptado tubería de PVC de 4″</strong>.</p>
+</section>
+<section id="canastilla-de-succion">
+<h3>9.4.4. Canastilla de succión<a class="headerlink" href="#canastilla-de-succion" title="Link to this heading">#</a></h3>
+<p>Con el objeto de retener partículas que pudiesen obstruir la red y reducir la velocidad puntual de succión que podría generar vórtices, se previó una canastilla ranurada en la tubería de salida. Cumpliendo los parámetros normativos, su diámetro se fijó en 12″ (<span class="math notranslate nohighlight">\(2 \times D_{salida}\)</span>) y su longitud en 1.00 m, ubicándose en el rango exigido de entre 3 a 6 veces su diámetro.</p>
+</section>
+</section>
+<section id="sistema-de-desinfeccion-y-obras-civiles-complementarias">
+<h2>9.5. Sistema de desinfección y obras civiles complementarias<a class="headerlink" href="#sistema-de-desinfeccion-y-obras-civiles-complementarias" title="Link to this heading">#</a></h2>
+<p>Para garantizar la calidad microbiológica del agua distribuida, se ha considerado un dosificador continuo de hipoclorito de calcio (al 65 % de pureza). Con una dosificación preventiva de 1.5 mg/L para el caudal <span class="math notranslate nohighlight">\(Q_{md}\)</span>, el sistema demandará <strong>3.06 kg/día</strong> de insumo desinfectante.</p>
+<p>El diseño integral incorpora además los siguientes componentes de obra civil esenciales para la preservación sanitaria e integridad de la estructura:</p>
+<ul class="simple">
+<li><p><strong>Pendiente de losa.</strong> Se dispuso una pendiente de fondo de 1.5 % dirigida hacia el sumidero de la tubería de limpia, garantizando la purga absoluta de sedimentos.</p></li>
+<li><p><strong>Ventilación.</strong> Se incluyó una tubería de PVC de 4″ tipo cuello de cisne en la cubierta, con malla metálica milimétrica, para disipar las fluctuaciones de presión sin permitir el ingreso de vectores biológicos.</p></li>
+<li><p><strong>Línea de by-pass.</strong> Se proyectó una conexión externa perimetral en PVC de 6″ que enlaza la línea de conducción con la de aducción, permitiendo mantener abastecida a la red por gravedad durante las horas de mantenimiento del reservorio.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="8_conduccion.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="10_aduccion.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">10. Diseño de la Línea de Aducción</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalidades-y-filosofia-de-diseno">9.1. Generalidades y filosofía de diseño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#volumen-de-regulacion-y-marco-normativo">9.2. Volumen de regulación y marco normativo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#predimensionamiento-geometrico-y-consideraciones-estructurales">9.3. Predimensionamiento geométrico y consideraciones estructurales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionamiento-hidraulico-de-tuberias-y-accesorios">9.4. Dimensionamiento hidráulico de tuberías y accesorios</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuberias-principales-entrada-y-salida">9.4.1. Tuberías principales (entrada y salida)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuberia-de-limpia-y-drenaje">9.4.2. Tubería de limpia y drenaje</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuberia-de-rebose">9.4.3. Tubería de rebose</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#canastilla-de-succion">9.4.4. Canastilla de succión</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sistema-de-desinfeccion-y-obras-civiles-complementarias">9.5. Sistema de desinfección y obras civiles complementarias</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ruben Rios
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

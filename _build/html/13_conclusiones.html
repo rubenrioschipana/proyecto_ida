@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>13. Conclusiones &#8212; Proyecto IDA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '13_conclusiones';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="14. Recomendaciones" href="14_recomendaciones.html" />
+    <link rel="prev" title="12. Descripción de riesgos naturales asociados al sistema" href="12_riesgos.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_utec.png" class="logo__image only-light" alt="Proyecto IDA - Home"/>
+    <img src="_static/logo_utec.png" class="logo__image only-dark pst-js-only" alt="Proyecto IDA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    UNIVERSIDAD DE INGENIERÍA Y TECNOLOGÍA (UTEC)
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_generalidades.html">1. Generalidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_antecedentes.html">2. Antecedentes del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_resumen.html">3. Resumen del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_informe_solicitud.html">4. Informe de solicitud de licencia de uso de agua para el proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_poblacion_d.html">5. Población de diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_caudales_d.html">6. Caudales de diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_ptap_y_captacion_de_fondo.html">7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_conduccion.html">8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_tanque.html">9. Diseño del tanque de almacenamiento (reservorio)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_aduccion.html">10. Diseño de la Línea de Aducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_red.html">11. Redes de distribución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_riesgos.html">12. Descripción de riesgos naturales asociados al sistema</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">13. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_recomendaciones.html">14. Recomendaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_referencias.html">15. Referencias bibliográficas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_calculos.html">16. Memoria de Calculo Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_planos.html">17. Planos</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F13_conclusiones.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/13_conclusiones.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>13. Conclusiones</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="conclusiones">
+<h1>13. Conclusiones<a class="headerlink" href="#conclusiones" title="Link to this heading">#</a></h1>
+<p><strong>1. Sobre la población y los caudales de diseño.</strong> Se adoptó una población de diseño de <strong>6 807 habitantes</strong> al horizonte de 20 años (año 2046), determinada mediante el modelo de proyección polinómico de segundo grado, por presentar el mejor coeficiente de determinación (R² = 0.886) y ser el más coherente con la tendencia de densificación urbana asociada a la producción industrial de leche en la localidad. Con una dotación de diseño de 150 L/hab/d (criterio SEDAPAL, nivel socioeconómico D), se obtuvieron los caudales característicos del sistema: Qm = 11.82 L/s, Qmd = 15.36 L/s y Qmh = 23.64 L/s, no siendo necesario considerar caudal contra incendio por tratarse de una población menor a 10 000 habitantes.</p>
+<p><strong>2. Sobre la captación.</strong> El sistema se abastece de dos fuentes independientes: la captación <strong>La Peña / Platanar</strong> (10.00 L/s) y la captación de manantial de fondo <strong>Los Chimbiles</strong> (5.36 L/s), cuya suma (15.36 L/s) coincide con el caudal máximo diario de diseño. La captación de Chimbiles se proyectó como una cámara de concreto armado sin losa de fondo, con cámara húmeda y seca diferenciadas, filtro de grava, tapa sanitaria hermética y cerco perimetral, en estricto cumplimiento de la norma RNE OS.010.</p>
+<p><strong>3. Sobre las líneas de conducción.</strong> Las líneas LC1 (La Peña, 2 937.96 m) y LC2 (Los Chimbiles, 1 206.11 m) transportan el agua hasta el reservorio íntegramente por gravedad. Ambas líneas cumplen simultáneamente los criterios hidráulicos (Hf &lt; Ht, velocidades entre 0.6 y 3.0 m/s) y estructurales (presión dinámica máxima muy por debajo de la presión nominal de la clase de tubería adoptada: clase 20 para LC1 y clase 12.5 para LC2).</p>
+<p><strong>4. Sobre la planta de tratamiento.</strong> Dada la vulnerabilidad hidroclimática de las fuentes superficiales de régimen lótico ante eventos de lluvia intensa, se proyectó una <strong>Planta de Tratamiento Convencional de Filtración Rápida</strong> (desarenador, mezcla rápida en canal Parshall, floculador hidráulico de pantallas, sedimentador de alta tasa con módulos de placas, filtración rápida de lecho dual y desinfección con hipoclorito de calcio), conforme a la Norma OS.020 y a los manuales del CEPIS/OPS, garantizando una turbidez de salida menor a 1.0 UNT.</p>
+<p><strong>5. Sobre el reservorio.</strong> Se adoptó un reservorio apoyado de sección circular en concreto armado, con una capacidad de <strong>300 m³</strong>, superior al volumen mínimo de regulación normativo (255.31 m³, equivalente al 25 % del volumen promedio diario), lo que otorga un margen adicional de resiliencia operativa. Las tuberías de entrada, salida, limpieza y rebose se estandarizaron en su mayoría en PVC de 6″, y se incorporó un sistema de dosificación continua de hipoclorito de calcio (3.06 kg/día) para la desinfección final.</p>
+<p><strong>6. Sobre la línea de aducción.</strong> El tramo de 115.00 m que conecta el reservorio con la red de distribución, dimensionado con el caudal máximo horario (23.64 L/s), cumple ampliamente los criterios hidráulicos y estructurales, con una pérdida de carga (1.06 m) muy inferior a la carga estática disponible (25.48 m) y una tubería de clase 5, la de menor presión nominal del sistema.</p>
+<p><strong>7. Sobre la red de distribución.</strong> La modelación hidráulica en EPANET V2.2, con demandas asignadas mediante el método de los Polígonos de Thiessen, evidencia que la red cumple de manera general con los parámetros normativos de la OS.050. No obstante, se identifican tres condiciones puntuales que requieren atención antes de la etapa de ejecución: (i) tramos con velocidades por debajo del mínimo normativo, asociados a sectores de baja demanda o ramales terminales; (ii) tramos cuyo diámetro hidráulicamente requerido (50 mm) resulta inferior al mínimo normativo de 75 mm exigido por razones de seguridad operativa y contra incendio; y (iii) una presión estática de 139.66 m en el nodo más bajo de la red, muy superior al límite normativo de 50 m.c.a., consecuencia directa del marcado desnivel topográfico entre el reservorio y la zona baja de la localidad.</p>
+<p><strong>8. Sobre los riesgos naturales.</strong> El emplazamiento del sistema en un entorno de sierra andina, con pendientes pronunciadas y precipitación pluvial media-alta, expone a la infraestructura a riesgos de erosión, arrastre de sedimentos hacia las captaciones y eventuales movimientos de tierra en las laderas de trazo de las líneas de conducción. Estos riesgos han sido considerados en el diseño mediante medidas de protección física de las captaciones, criterios sismorresistentes en las estructuras de concreto armado y un programa de monitoreo de la calidad del agua, por lo que no se identifican condiciones que comprometan la viabilidad técnica del proyecto.</p>
+<p><strong>9. Sobre el impacto ambiental.</strong> De acuerdo con el Estudio de Impacto Ambiental, los impactos ambientales potenciales de mayor relevancia son los <strong>positivos</strong>, concentrados en la etapa de funcionamiento del sistema (mejora de la salud pública, reducción de enfermedades gastrointestinales, generación de empleo). Los impactos negativos se concentran en la etapa de construcción (movimientos de tierra, alteración temporal de la calidad del aire, suelo y paisaje), son en su mayoría de baja a moderada magnitud y cuentan con alta posibilidad de aplicación de medidas de prevención y mitigación, lo que hace viable la ejecución de la obra.</p>
+<p><strong>10. Conclusión general.</strong> El sistema de abastecimiento de agua potable proyectado para Cascas —captación, conducción, tratamiento, almacenamiento, aducción y distribución— constituye una solución técnicamente viable e integralmente concebida para operar por gravedad, sin necesidad de sistemas de bombeo, aprovechando la energía potencial del relieve andino en todas sus etapas. El diseño satisface los criterios hidráulicos y normativos exigidos por el Reglamento Nacional de Edificaciones (OS.010, OS.020, OS.030 y OS.050), quedando pendientes únicamente los ajustes puntuales identificados en la red de distribución, que se abordan en el capítulo de recomendaciones.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="12_riesgos.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">12. Descripción de riesgos naturales asociados al sistema</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="14_recomendaciones.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">14. Recomendaciones</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ruben Rios
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,621 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6. Caudales de diseño &#8212; Proyecto IDA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '6_caudales_d';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)" href="7_ptap_y_captacion_de_fondo.html" />
+    <link rel="prev" title="5. Población de diseño" href="5_poblacion_d.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_utec.png" class="logo__image only-light" alt="Proyecto IDA - Home"/>
+    <img src="_static/logo_utec.png" class="logo__image only-dark pst-js-only" alt="Proyecto IDA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    UNIVERSIDAD DE INGENIERÍA Y TECNOLOGÍA (UTEC)
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_generalidades.html">1. Generalidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_antecedentes.html">2. Antecedentes del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_resumen.html">3. Resumen del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_informe_solicitud.html">4. Informe de solicitud de licencia de uso de agua para el proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_poblacion_d.html">5. Población de diseño</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Caudales de diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_ptap_y_captacion_de_fondo.html">7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_conduccion.html">8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_tanque.html">9. Diseño del tanque de almacenamiento (reservorio)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_aduccion.html">10. Diseño de la Línea de Aducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_red.html">11. Redes de distribución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_riesgos.html">12. Descripción de riesgos naturales asociados al sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_conclusiones.html">13. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_recomendaciones.html">14. Recomendaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_referencias.html">15. Referencias bibliográficas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_calculos.html">16. Memoria de Calculo Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_planos.html">17. Planos</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F6_caudales_d.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/6_caudales_d.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>6. Caudales de diseño</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dotacion">6.1. Dotación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.2. Caudales de diseño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asignacion-del-caudal-por-tipo-de-estructura">6.3. Asignación del caudal por tipo de estructura</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="caudales-de-diseno">
+<h1>6. Caudales de diseño<a class="headerlink" href="#caudales-de-diseno" title="Link to this heading">#</a></h1>
+<section id="dotacion">
+<h2>6.1. Dotación<a class="headerlink" href="#dotacion" title="Link to this heading">#</a></h2>
+<p>La <strong>dotación</strong> es el volumen de agua asignado por habitante y por día y, junto con la población, es el segundo parámetro determinante de la demanda. Su valor depende del clima, los hábitos de consumo, el nivel socioeconómico y los usos previstos. La localidad presenta un <strong>clima cálido seco</strong>, con temperaturas entre 12 °C y 19 °C; económicamente predomina una economía de subsistencia, con un ingreso promedio mensual del orden de S/ 550 en el área urbana (nivel socioeconómico D).</p>
+<p>Se evaluaron dos referencias normativas:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Referencia</p></th>
+<th class="head text-center"><p>Dotación</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>RNE OS.100 (clima cálido seco, lotes &gt; 90 m²)</p></td>
+<td class="text-center"><p>180 L/hab/d</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>SEDAPAL (nivel socioeconómico D)</p></td>
+<td class="text-center"><p>150 L/hab/d</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Tabla 6.1. Dotación según referencia normativa.</em></p>
+<p>El RNE, atendiendo únicamente al clima y al tamaño de lote, asignaría 180 L/hab/d; sin embargo, este valor no recoge el nivel de consumo efectivo de una población de economía de subsistencia. El criterio de SEDAPAL, que sí incorpora el nivel socioeconómico, propone 150 L/hab/d, valor más representativo del consumo real. Por ello se adopta una <strong>dotación de diseño de 150 L/hab/d</strong>.</p>
+</section>
+<section id="id1">
+<h2>6.2. Caudales de diseño<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>El consumo no es uniforme en el tiempo: varía a lo largo del año (días de mayor demanda) y del día (horas pico). Para que cada estructura funcione adecuadamente en su condición más desfavorable se definen tres caudales característicos.</p>
+<p><strong>Caudal promedio diario (<span class="math notranslate nohighlight">\(Q_m\)</span>).</strong> Consumo medio de la población a lo largo de un año:</p>
+<div class="math notranslate nohighlight">
+\[ Q_{m} = \dfrac{P \cdot Dot}{86\,400} = \dfrac{6\,807 \times 150}{86\,400} = 11.82 \ \text{L/s} \]</div>
+<p><strong>Caudal máximo diario (<span class="math notranslate nohighlight">\(Q_{md}\)</span>).</strong> Día de mayor consumo del año (<span class="math notranslate nohighlight">\(K_{1} = 1.3\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ Q_{md} = K_{1} \cdot Q_{m} = 1.3 \times 11.82 = 15.36 \ \text{L/s} \]</div>
+<p><strong>Caudal máximo horario (<span class="math notranslate nohighlight">\(Q_{mh}\)</span>).</strong> Hora de mayor consumo del día más desfavorable (<span class="math notranslate nohighlight">\(K_{2} = 2.0\)</span>):</p>
+<div class="math notranslate nohighlight">
+\[ Q_{mh} = K_{2} \cdot Q_{m} = 2.0 \times 11.82 = 23.64 \ \text{L/s} \]</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Caudal</p></th>
+<th class="head text-center"><p>Coeficiente</p></th>
+<th class="head text-center"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Promedio diario, Qm</p></td>
+<td class="text-center"><p>—</p></td>
+<td class="text-center"><p>11.82 L/s</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Máximo diario, Qmd</p></td>
+<td class="text-center"><p>K₁ = 1.3</p></td>
+<td class="text-center"><p>15.36 L/s</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Máximo horario, Qmh</p></td>
+<td class="text-center"><p>K₂ = 2.0</p></td>
+<td class="text-center"><p>23.64 L/s</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Tabla 6.2. Caudales de diseño del sistema.</em></p>
+</section>
+<section id="asignacion-del-caudal-por-tipo-de-estructura">
+<h2>6.3. Asignación del caudal por tipo de estructura<a class="headerlink" href="#asignacion-del-caudal-por-tipo-de-estructura" title="Link to this heading">#</a></h2>
+<p>El caudal con que se dimensiona cada estructura depende de su función. Las estructuras <strong>aguas arriba del tanque</strong> (captación, conducción, planta de tratamiento, aducción y el propio tanque) operan de forma continua y se diseñan con el <strong>caudal máximo diario (<span class="math notranslate nohighlight">\(Q_{md}\)</span>)</strong>, ya que el tanque amortigua las variaciones horarias. Las estructuras <strong>aguas abajo del tanque</strong> (línea de alimentación y red de distribución) atienden directamente la demanda instantánea y se diseñan con el <strong>caudal máximo horario (<span class="math notranslate nohighlight">\(Q_{mh}\)</span>)</strong>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Estructura</p></th>
+<th class="head text-center"><p>Caudal de diseño</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Obra de captación</p></td>
+<td class="text-center"><p>Qmd</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Línea de conducción</p></td>
+<td class="text-center"><p>Qmd</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Planta de tratamiento</p></td>
+<td class="text-center"><p>Qmd</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Línea de aducción</p></td>
+<td class="text-center"><p>Qmd</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Tanque de almacenamiento</p></td>
+<td class="text-center"><p>Qmd</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p>Línea de alimentación de la red</p></td>
+<td class="text-center"><p>Qmh</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>Red de distribución</p></td>
+<td class="text-center"><p>Qmh</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Tabla 6.3. Asignación del caudal de diseño según estructura.</em></p>
+<p>No se considera <strong>caudal contra incendio</strong>, por tratarse de una población menor a 10 000 habitantes, conforme lo permite la norma OS.100.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="5_poblacion_d.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">5. Población de diseño</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="7_ptap_y_captacion_de_fondo.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dotacion">6.1. Dotación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.2. Caudales de diseño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asignacion-del-caudal-por-tipo-de-estructura">6.3. Asignación del caudal por tipo de estructura</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ruben Rios
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

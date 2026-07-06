@@ -1,0 +1,714 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles) &#8212; Proyecto IDA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '7_ptap_y_captacion_de_fondo';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio" href="8_conduccion.html" />
+    <link rel="prev" title="6. Caudales de diseño" href="6_caudales_d.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_utec.png" class="logo__image only-light" alt="Proyecto IDA - Home"/>
+    <img src="_static/logo_utec.png" class="logo__image only-dark pst-js-only" alt="Proyecto IDA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    UNIVERSIDAD DE INGENIERÍA Y TECNOLOGÍA (UTEC)
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_generalidades.html">1. Generalidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_antecedentes.html">2. Antecedentes del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_resumen.html">3. Resumen del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_informe_solicitud.html">4. Informe de solicitud de licencia de uso de agua para el proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_poblacion_d.html">5. Población de diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_caudales_d.html">6. Caudales de diseño</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_conduccion.html">8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_tanque.html">9. Diseño del tanque de almacenamiento (reservorio)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_aduccion.html">10. Diseño de la Línea de Aducción</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_red.html">11. Redes de distribución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_riesgos.html">12. Descripción de riesgos naturales asociados al sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_conclusiones.html">13. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_recomendaciones.html">14. Recomendaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_referencias.html">15. Referencias bibliográficas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_calculos.html">16. Memoria de Calculo Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_planos.html">17. Planos</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F7_ptap_y_captacion_de_fondo.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/7_ptap_y_captacion_de_fondo.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diseno-de-la-ptap-las-penas">7.1. Diseño de la PTAP (Las Peñas)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marco-normativo-y-fundamentacion-tecnologica">7.1.1. Marco normativo y fundamentación tecnológica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuaciones-fundamentales-y-parametros-hidraulicos-base">7.1.2. Ecuaciones fundamentales y parámetros hidráulicos base</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esquemas-explicativos-del-sistema-de-tratamiento">7.1.3. Esquemas explicativos del sistema de tratamiento</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descripcion-fisica-quimica-y-operativa-de-las-unidades">7.1.4. Descripción física, química y operativa de las unidades</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desarenador-de-flujo-horizontal">7.1.4.1. Desarenador de flujo horizontal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mezcla-rapida-y-coagulacion-canal-parshall">7.1.4.2. Mezcla rápida y coagulación (canal Parshall)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#floculador-hidraulico-de-pantallas">7.1.4.3. Floculador hidráulico de pantallas</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sedimentador-de-alta-tasa-modulos-de-placas">7.1.4.4. Sedimentador de alta tasa (módulos de placas)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filtracion-rapida-de-lecho-dual">7.1.4.5. Filtración rápida de lecho dual</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desinfeccion-final-y-camara-de-contacto">7.1.4.6. Desinfección final y cámara de contacto</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-operacion-mantenimiento-o-m-y-gestion-de-lodos">7.1.5. Criterios de operación, mantenimiento (O&amp;M) y gestión de lodos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diseno-de-la-captacion-de-fondo-chimbiles">7.2. Diseño de la Captación de Fondo (Chimbiles)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concepcion-del-diseno-y-sustento-normativo">7.2.1. Concepción del diseño y sustento normativo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#componentes-principales-y-detalles-constructivos">7.2.2. Componentes principales y detalles constructivos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memoria-de-calculo-hidraulico-estructural">7.2.3. Memoria de cálculo hidráulico-estructural</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#geometria-y-alturas-de-la-camara-humeda">7.2.3.1. Geometría y alturas de la cámara húmeda</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionamiento-de-la-canastilla-de-salida">7.2.3.2. Dimensionamiento de la canastilla de salida</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tuberias-de-rebose-y-limpia">7.2.3.3. Tuberías de rebose y limpia</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consideraciones-de-operacion-y-mantenimiento-o-m">7.2.4. Consideraciones de operación y mantenimiento (O&amp;M)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="diseno-y-descripcion-de-la-planta-de-tratamiento-de-agua-potable-ptap-las-penas-y-captacion-de-manantial-de-fondo-chimbiles">
+<h1>7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)<a class="headerlink" href="#diseno-y-descripcion-de-la-planta-de-tratamiento-de-agua-potable-ptap-las-penas-y-captacion-de-manantial-de-fondo-chimbiles" title="Link to this heading">#</a></h1>
+<section id="diseno-de-la-ptap-las-penas">
+<h2>7.1. Diseño de la PTAP (Las Peñas)<a class="headerlink" href="#diseno-de-la-ptap-las-penas" title="Link to this heading">#</a></h2>
+<section id="marco-normativo-y-fundamentacion-tecnologica">
+<h3>7.1.1. Marco normativo y fundamentación tecnológica<a class="headerlink" href="#marco-normativo-y-fundamentacion-tecnologica" title="Link to this heading">#</a></h3>
+<p>El diseño conceptual de la Planta de Tratamiento de Agua Potable (PTAP) a nivel de perfil responde a la necesidad de dotar a la población de un recurso hídrico seguro, continuo y que cumpla estrictamente con los Estándares de Calidad Ambiental (ECA) y el <strong>Reglamento de la Calidad del Agua para Consumo Humano (D.S. N.° 031-2010-SA)</strong>. Las fuentes superficiales de régimen lótico, típicas de las cuencas andinas, presentan una vulnerabilidad hidroclimática extrema: durante las precipitaciones intensas, la escorrentía acarrea material particulado, limos, arcillas y materia orgánica, incrementando la turbidez por encima de las 50 UNT, acompañada de una elevada concentración de coliformes termotolerantes.</p>
+<p>Bajo este escenario, metodologías simplificadas como la desinfección primaria o la filtración directa resultan inviables y representan un riesgo para la salud pública. En estricta sujeción a la <strong>Norma Técnica OS.020</strong> del RNE (MVCS, 2006) y a los manuales de clarificación del CEPIS/OPS, se proyecta una <strong>Planta de Tratamiento Convencional de Filtración Rápida</strong>, barrera sanitaria multietapa compuesta secuencialmente por coagulación, floculación, sedimentación, filtración y desinfección química, que garantiza la remoción integral de partículas coloidales y la entrega de un efluente con turbidez controlada menor a 1.0 UNT.</p>
+</section>
+<section id="ecuaciones-fundamentales-y-parametros-hidraulicos-base">
+<h3>7.1.2. Ecuaciones fundamentales y parámetros hidráulicos base<a class="headerlink" href="#ecuaciones-fundamentales-y-parametros-hidraulicos-base" title="Link to this heading">#</a></h3>
+<p>El dimensionamiento del tren de tratamiento absorbe el escenario de mayor demanda, definido por el Caudal Máximo Diario (<span class="math notranslate nohighlight">\(Q_{md}\)</span>). Para el presente proyecto, el caudal de diseño de 15.36 L/s se homogeneizó a sus equivalentes volumétricos:</p>
+<div class="math notranslate nohighlight">
+\[ Q_{md} = 15.36 \text{ L/s} = 55.29 \text{ m}^3\text{/h} = 1\,327.10 \text{ m}^3\text{/día} \]</div>
+<p>El predimensionamiento de las unidades obedece a las siguientes ecuaciones rectoras:</p>
+<ul class="simple">
+<li><p><strong>Tasa de aplicación superficial (<span class="math notranslate nohighlight">\(V_a\)</span>)</strong> — límite de decantación en el sedimentador:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ V_a = \frac{Q}{A_s} \le 120 \text{ m}^3/\text{m}^2/\text{día} \]</div>
+<ul class="simple">
+<li><p><strong>Gradiente de velocidad (<span class="math notranslate nohighlight">\(G\)</span>)</strong> — intensidad de mezcla y disipación de energía, vital para coagulación y floculación:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ G = \sqrt{\frac{\gamma \cdot h_f}{\mu \cdot t}} \]</div>
+<ul class="simple">
+<li><p><strong>Velocidad de sedimentación (<span class="math notranslate nohighlight">\(v_s\)</span>), Ley de Stokes</strong> — decantación de partículas discretas en el desarenado, en flujo laminar:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[ v_s = \frac{g (\rho_s - \rho_w) d^2}{18 \mu} \]</div>
+</section>
+<section id="esquemas-explicativos-del-sistema-de-tratamiento">
+<h3>7.1.3. Esquemas explicativos del sistema de tratamiento<a class="headerlink" href="#esquemas-explicativos-del-sistema-de-tratamiento" title="Link to this heading">#</a></h3>
+<div align="center">
+  <img src="esquema1_diagrama_procesos.png" width="600"><br>
+  <em><strong>Figura 7.1.</strong> Diagrama unifilar de procesos físico-químicos (elaboración propia). La secuencia detalla los puntos de dosificación química: sulfato de aluminio en la mezcla rápida e hipoclorito de calcio en el reservorio de contacto.</em>
+</div>
+<div align="center">
+  <img src="esquema2_perfil_hidraulico.png" width="600"><br>
+  <em><strong>Figura 7.2.</strong> Perfil hidráulico de gravedad en ladera (elaboración propia). Al disponer las unidades en arreglo tipo "cascada" se aprovecha la energía potencial gravitatoria del relieve andino para conducir los 15.36 L/s y generar las pérdidas de carga necesarias para la floculación, anulando la dependencia de bombeo electromecánico inter-procesos.</em>
+</div>
+</section>
+<section id="descripcion-fisica-quimica-y-operativa-de-las-unidades">
+<h3>7.1.4. Descripción física, química y operativa de las unidades<a class="headerlink" href="#descripcion-fisica-quimica-y-operativa-de-las-unidades" title="Link to this heading">#</a></h3>
+<p>El dimensionamiento de las estructuras considera un margen de seguridad por pérdidas de planta (agua de retrolavado y purgas) del 5 %. El tren de tratamiento se describe a continuación:</p>
+<section id="desarenador-de-flujo-horizontal">
+<h4>7.1.4.1. Desarenador de flujo horizontal<a class="headerlink" href="#desarenador-de-flujo-horizontal" title="Link to this heading">#</a></h4>
+<p>Constituye el pretratamiento físico fundamental para proteger la infraestructura. Su objetivo es la decantación de partículas minerales discretas (diámetro <span class="math notranslate nohighlight">\(\ge 0.2\)</span> mm y gravedad específica <span class="math notranslate nohighlight">\(\approx 2.65\)</span>). El canal de transición expande el área transversal para reducir la velocidad horizontal de paso a <span class="math notranslate nohighlight">\(v_h &lt; 0.3\)</span> m/s, asegurando que el esfuerzo cortante de arrastre en el fondo no resuspenda las arenas depositadas, protegiendo las obras posteriores de la abrasión y evitando el azolvamiento de los canales del floculador.</p>
+</section>
+<section id="mezcla-rapida-y-coagulacion-canal-parshall">
+<h4>7.1.4.2. Mezcla rápida y coagulación (canal Parshall)<a class="headerlink" href="#mezcla-rapida-y-coagulacion-canal-parshall" title="Link to this heading">#</a></h4>
+<p>Representa la etapa crítica de alteración química de la masa de agua. Se dosifica el coagulante metálico (sulfato de aluminio en solución) para desestabilizar la carga electronegativa que mantiene en repulsión a los coloides (turbidez). El canal Parshall fuerza un cambio de régimen subcrítico a supercrítico (número de Froude <span class="math notranslate nohighlight">\(Fr &gt; 1\)</span>), induciendo un resalto hidráulico al pie de su garganta que disipa una alta cantidad de energía cinética, generando un gradiente de velocidad instantáneo <span class="math notranslate nohighlight">\(G &gt; 1000 \text{ s}^{-1}\)</span> con un tiempo de mezcla inferior a 1 segundo, lo que asegura la dispersión homogénea del catión <span class="math notranslate nohighlight">\(Al^{3+}\)</span> antes de la polimerización.</p>
+</section>
+<section id="floculador-hidraulico-de-pantallas">
+<h4>7.1.4.3. Floculador hidráulico de pantallas<a class="headerlink" href="#floculador-hidraulico-de-pantallas" title="Link to this heading">#</a></h4>
+<p>Estructura de tabiquería de concreto con pantallas deflectoras dispuestas en serpentín. Opera bajo el principio de la <em>floculación ortocinética</em>: los gradientes de velocidad inducidos por las pérdidas de carga en los giros provocan múltiples colisiones entre las partículas desestabilizadas, permitiendo que se aglomeren en flóculos visibles y pesados. El predimensionamiento incluye un tiempo de retención (<span class="math notranslate nohighlight">\(t_r\)</span>) de 30 minutos y un gradiente de velocidad escalonado decreciente (p. ej., <span class="math notranslate nohighlight">\(70 \rightarrow 40 \rightarrow 20 \text{ s}^{-1}\)</span>). Esta disminución progresiva de la turbulencia evita la ruptura física del flóculo por cizallamiento conforme gana masa, tamaño y fragilidad.</p>
+</section>
+<section id="sedimentador-de-alta-tasa-modulos-de-placas">
+<h4>7.1.4.4. Sedimentador de alta tasa (módulos de placas)<a class="headerlink" href="#sedimentador-de-alta-tasa-modulos-de-placas" title="Link to this heading">#</a></h4>
+<p>Corazón del proceso de clarificación. Consiste en un tanque rectangular equipado con módulos internos de perfiles de ABS o plástico reforzado inclinados a <span class="math notranslate nohighlight">\(60^\circ\)</span> respecto a la horizontal. Operando según la teoría del <em>efecto Boycott</em>, las placas disminuyen drásticamente la distancia de sedimentación: el caudal asciende en régimen laminar estricto (número de Reynolds <span class="math notranslate nohighlight">\(Re &lt; 500\)</span>) mientras los flóculos resbalan contra la pendiente de las placas y caen hacia la tolva de lodos. Gracias a esta tecnología, el área superficial requerida (<span class="math notranslate nohighlight">\(A_s\)</span>) se reduce considerablemente frente a un decantador convencional, operando con una tasa superficial de <span class="math notranslate nohighlight">\(120 \text{ m}^3/\text{m}^2/\text{día}\)</span>.</p>
+</section>
+<section id="filtracion-rapida-de-lecho-dual">
+<h4>7.1.4.5. Filtración rápida de lecho dual<a class="headerlink" href="#filtracion-rapida-de-lecho-dual" title="Link to this heading">#</a></h4>
+<p>Batería de dos (02) unidades en paralelo con flujo descendente. El manto filtrante posee configuración mixta: una capa superior de antracita (baja densidad, granulometría gruesa) y una capa inferior de arena sílica (alta densidad, granulometría fina). Este diseño propicia la “filtración en profundidad”, reteniendo los microflóculos remanentes en toda la columna del lecho sin colmatar rápidamente la superficie. Al excederse la pérdida de carga máxima permitida (<span class="math notranslate nohighlight">\(h_f\)</span>) o alcanzar la turbidez límite, el sistema de válvulas invierte el flujo, inyectando agua limpia a presión de forma ascendente para lograr la fluidización, expansión y lavado del lecho granular.</p>
+</section>
+<section id="desinfeccion-final-y-camara-de-contacto">
+<h4>7.1.4.6. Desinfección final y cámara de contacto<a class="headerlink" href="#desinfeccion-final-y-camara-de-contacto" title="Link to this heading">#</a></h4>
+<p>Fase de aseguramiento terminal de la inocuidad biológica. A la salida del efluente filtrado se inyecta una solución de hipoclorito de calcio al 65 %. Para optimizar costos y no requerir estructuras redundantes, el propio volumen del reservorio de almacenamiento adyacente funcionará simultáneamente como cámara de contacto masiva, proveyendo el tiempo de residencia hidráulica mínimo normativo de 30 minutos (<span class="math notranslate nohighlight">\(t_c \ge 30\)</span> min). Esto satisface la demanda inicial de cloro del agua y asegura un residual protector de <span class="math notranslate nohighlight">\(\ge 0.5 \text{ mg/L}\)</span> a lo largo de toda la red de distribución, evitando recontaminaciones bacteriológicas durante el trayecto hacia los domicilios.</p>
+</section>
+</section>
+<section id="criterios-de-operacion-mantenimiento-o-m-y-gestion-de-lodos">
+<h3>7.1.5. Criterios de operación, mantenimiento (O&amp;M) y gestión de lodos<a class="headerlink" href="#criterios-de-operacion-mantenimiento-o-m-y-gestion-de-lodos" title="Link to this heading">#</a></h3>
+<p>Para garantizar la sostenibilidad del sistema a lo largo de su vida útil se establecen los siguientes lineamientos operativos a nivel de perfil:</p>
+<ul class="simple">
+<li><p><strong>Pruebas de jarras (Jar Test).</strong> La dosis de coagulante no es estática; el operador deberá realizar ensayos diarios para ajustar la concentración de <span class="math notranslate nohighlight">\(Al_2(SO_4)_3\)</span> en respuesta a las variaciones de turbidez derivadas de eventos de lluvia.</p></li>
+<li><p><strong>Gestión de lodos de sedimentación.</strong> Las purgas de las tolvas generarán un volumen considerable de lodos fisicoquímicos (con trazas de aluminio). Se proyecta la implementación de lechos de secado anexos para la deshidratación natural antes de su disposición final en rellenos sanitarios autorizados, mitigando el impacto sobre los cauces receptores.</p></li>
+<li><p><strong>Recirculación de agua de retrolavado.</strong> El agua empleada en la limpieza de los filtros será conducida a una poza de ecualización para su decantación temporal y posterior rebombeo hacia la cabecera de la planta (antes del desarenador), optimizando la eficiencia hídrica frente al estrés hídrico de la sierra.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="diseno-de-la-captacion-de-fondo-chimbiles">
+<h2>7.2. Diseño de la Captación de Fondo (Chimbiles)<a class="headerlink" href="#diseno-de-la-captacion-de-fondo-chimbiles" title="Link to this heading">#</a></h2>
+<section id="concepcion-del-diseno-y-sustento-normativo">
+<h3>7.2.1. Concepción del diseño y sustento normativo<a class="headerlink" href="#concepcion-del-diseno-y-sustento-normativo" title="Link to this heading">#</a></h3>
+<p>El presente diseño definitivo corresponde a la infraestructura de captación para la fuente hídrica denominada “Chimbiles”, la cual consiste en un afloramiento de aguas subterráneas. Dadas las condiciones físicas y el proceso natural de filtración, el diseño se enfoca en la protección del afloramiento para garantizar la inocuidad del recurso.</p>
+<p>En estricta sujeción a la normativa vigente del Reglamento Nacional de Edificaciones (RNE), específicamente la <strong>Norma RNE OS.010 (Captación de Agua de Fuentes Superficiales y Subterráneas)</strong>, se ha proyectado una <strong>Cámara de Captación para Manantial de Fondo</strong> en concreto armado. Esta infraestructura consiste en una cámara sin losa de fondo que rodea perimetralmente el punto de brote del agua, permitiendo su recolección ascendente y derivación segura hacia la línea de conducción.</p>
+</section>
+<section id="componentes-principales-y-detalles-constructivos">
+<h3>7.2.2. Componentes principales y detalles constructivos<a class="headerlink" href="#componentes-principales-y-detalles-constructivos" title="Link to this heading">#</a></h3>
+<p>El diseño definitivo de la captación de fondo integra componentes estructurales y accesorios hidráulicos seleccionados bajo criterios de durabilidad y eficiencia sanitaria. La integración de estos elementos asegura la inocuidad del recurso y facilita las labores de mantenimiento:</p>
+<ul class="simple">
+<li><p><strong>Cámara húmeda y seca:</strong> El diseño sectoriza la estructura en dos zonas diferenciadas. La cámara húmeda actúa como vaso receptor del afloramiento, mientras que la cámara seca aísla las válvulas de control (compuertas y purgas) de la inmersión constante, mitigando la corrosión y permitiendo una operación segura del sistema. Los muros de concreto armado (<span class="math notranslate nohighlight">\(f'_c = 210 \text{ kg/cm}^2\)</span>) y los detalles de refuerzo se rigen por la norma RNE E.060.</p></li>
+<li><p><strong>Filtro de grava (lecho filtrante):</strong> Ubicado en la base de la cámara húmeda, este filtro de grava con granulometría seleccionada cumple una doble función: protege el afloramiento contra la erosión provocada por la presión ascendente del agua y retiene el material particulado grueso. Su disposición técnica está fundamentada en la norma RNE OS.010, Art. 3.2.e.</p></li>
+<li><p><strong>Tapa sanitaria y sello hermético:</strong> La cámara cuenta con una tapa de inspección metálica provista de un sello sanitario hermético. Este elemento es crítico para prevenir la intrusión de agentes contaminantes externos, vectores biológicos y, fundamentalmente, para evitar la incidencia directa de radiación solar, inhibiendo así el crecimiento de algas dentro de la cámara húmeda.</p></li>
+<li><p><strong>Cerco perimetral de protección:</strong> Para restringir el acceso a la zona de afloramiento y evitar interferencias antropogénicas o de animales, se proyecta un cerco de malla olímpica galvanizada sobre postes de concreto. Este cerco perimetral constituye la barrera física primaria de protección de la fuente, cumpliendo estrictamente con la norma RNE OS.010, Art. 3.4.g.</p></li>
+</ul>
+<div align="center">
+  <img src="plano_captación_planta.png" width="600"><br>
+  <em><strong>Figura 7.3.</strong> Esquema 1: Planta y cortes hidráulicos generales de la Captación de Fondo (elaboración propia, en base a los planos de Arquitectura y Estructura A-CF-01 / E-CF-01).</em>
+</div>
+</section>
+<section id="memoria-de-calculo-hidraulico-estructural">
+<h3>7.2.3. Memoria de cálculo hidráulico-estructural<a class="headerlink" href="#memoria-de-calculo-hidraulico-estructural" title="Link to this heading">#</a></h3>
+<section id="geometria-y-alturas-de-la-camara-humeda">
+<h4>7.2.3.1. Geometría y alturas de la cámara húmeda<a class="headerlink" href="#geometria-y-alturas-de-la-camara-humeda" title="Link to this heading">#</a></h4>
+<p>El dimensionamiento de la cámara húmeda ha sido calculado para garantizar un régimen de flujo laminar y estable, optimizando la capacidad de almacenamiento y la protección de la fuente. La altura total de la estructura se ha desglosado considerando la cota de fondo, el espesor del lecho filtrante y la carga hidráulica necesaria.</p>
+<p>Para evitar fenómenos de succión de finos del acuífero, la velocidad de entrada del agua hacia la cámara se ha limitado estrictamente a <span class="math notranslate nohighlight">\(V \le 0.60\)</span> m/s, adoptando un valor de diseño conservador de <span class="math notranslate nohighlight">\(0.50\)</span> m/s. La carga hidráulica (<span class="math notranslate nohighlight">\(H\)</span>) requerida para vencer las pérdidas locales en el orificio de salida se calcula mediante la ecuación de energía:</p>
+<div class="math notranslate nohighlight">
+\[ H = 1.56 \frac{V^2}{2g} = 1.56 \frac{0.50^2}{2 \times 9.81} \approx 0.020 \text{ m } (2.0 \text{ cm}) \]</div>
+<p>La altura total del tirante de agua se define como la suma del espesor del filtro de grava, la altura necesaria para la canastilla de succión y el resguardo por carga hidráulica. Adicionalmente, se ha incorporado un borde libre (<span class="math notranslate nohighlight">\(h_2\)</span>) de 0.30 m, conforme a la norma RNE OS.030, con el fin de absorber eventuales oleajes o fluctuaciones repentinas del nivel freático sin riesgo de rebose descontrolado. Los muros, con un espesor variable de 0.15 m a 0.20 m, han sido diseñados bajo los parámetros de muros de contención de la norma E.060, garantizando la estabilidad estructural ante el empuje de tierras y cargas hidrostáticas internas.</p>
+</section>
+<section id="dimensionamiento-de-la-canastilla-de-salida">
+<h4>7.2.3.2. Dimensionamiento de la canastilla de salida<a class="headerlink" href="#dimensionamiento-de-la-canastilla-de-salida" title="Link to this heading">#</a></h4>
+<p>La canastilla de salida (o granada de succión) actúa como el primer elemento de control en la línea de conducción. Su diseño tiene dos objetivos críticos: minimizar las pérdidas por contracción al ingreso de la tubería y prevenir la entrada de material sólido que pueda obstruir la red. Siguiendo las prácticas sanitarias estándar (PNSR), se ha dimensionado bajo las siguientes restricciones normativas:</p>
+<ul class="simple">
+<li><p><strong>Diámetro:</strong> Se adopta <span class="math notranslate nohighlight">\(D_{canastilla} = 2 \times D_{conducción}\)</span>. Al duplicar el diámetro nominal respecto a la tubería matriz, se reduce la velocidad de aproximación a la mitad, evitando el efecto de “vórtice” que podría succionar arenas finas que hayan atravesado el filtro.</p></li>
+<li><p><strong>Longitud:</strong> Se acota en el rango <span class="math notranslate nohighlight">\(3D_c &lt; L &lt; 6D_c\)</span>. Esta longitud extendida permite una mayor área de paso total a través de las ranuras, reduciendo la pérdida de carga localizada.</p></li>
+</ul>
+</section>
+<section id="tuberias-de-rebose-y-limpia">
+<h4>7.2.3.3. Tuberías de rebose y limpia<a class="headerlink" href="#tuberias-de-rebose-y-limpia" title="Link to this heading">#</a></h4>
+<p>La capacidad de evacuación es vital para el mantenimiento operativo. Las tuberías de rebose y limpia han sido calculadas para garantizar el vaciado total de la estructura en un tiempo máximo de 2 horas. Para el rebose, se utiliza la ecuación de vertederos circulares, asegurando que ante una falla en la válvula de ingreso, la tubería de rebose tenga la capacidad hidráulica para evacuar el caudal máximo sin inundar la losa superior. Se ha proyectado una pendiente longitudinal de 1.5 % para asegurar una velocidad de autolimpieza (<span class="math notranslate nohighlight">\(V &gt; 0.6\)</span> m/s), evitando que los sedimentos purgados se depositen dentro de la tubería de limpieza, asegurando así la operatividad a largo plazo.</p>
+<div align="center">
+  <img src="plano_captación_cercoperimetrico.png" width="600"><br>
+  <em><strong>Figura 7.4.</strong> Esquema 2: Detalles estructurales y del cerco perimétrico de la captación (elaboración propia, en base al plano de Estructura E-CF-01).</em>
+</div>
+</section>
+</section>
+<section id="consideraciones-de-operacion-y-mantenimiento-o-m">
+<h3>7.2.4. Consideraciones de operación y mantenimiento (O&amp;M)<a class="headerlink" href="#consideraciones-de-operacion-y-mantenimiento-o-m" title="Link to this heading">#</a></h3>
+<p>La sostenibilidad operativa de la infraestructura de captación depende de un plan de mantenimiento preventivo sistemático. A continuación, se definen los protocolos obligatorios para garantizar la potabilidad del agua y la vida útil de los componentes civiles y mecánicos:</p>
+<ul class="simple">
+<li><p><strong>Inspección y limpieza del perímetro:</strong> Se realizarán inspecciones mensuales del cerco perimetral y las cunetas de coronación. Es crítico mantener las cunetas libres de vegetación, sedimentos o derrumbes que impidan el drenaje de las aguas de escorrentía pluvial, evitando que estas ingresen al afloramiento y contaminen la fuente.</p></li>
+<li><p><strong>Protocolo de purga y limpieza de la cámara:</strong> Semestralmente, o tras episodios de lluvias intensas, se procederá con la purga de sedimentos acumulados en el fondo de la cámara húmeda. Esto se realizará mediante la apertura controlada de la válvula de limpieza ubicada en la cámara seca. Esta maniobra asegura que las arenas finas no se acumulen sobre el lecho filtrante, manteniendo la capacidad de recolección ascendente original del diseño.</p></li>
+<li><p><strong>Verificación de hermeticidad y protección sanitaria:</strong> Se deberá inspeccionar la tapa metálica de inspección para asegurar que su sello sanitario esté íntegro. Cualquier signo de corrosión o falla en la empaquetadura debe ser corregido inmediatamente para evitar la entrada de vectores biológicos (insectos, roedores) o contaminación externa, garantizando que el espejo de agua permanezca bajo condiciones de oscuridad total para inhibir la fotosíntesis (crecimiento de algas).</p></li>
+<li><p><strong>Mantenimiento de válvulas y accesorios:</strong> Las válvulas de control (compuertas) deben ser accionadas totalmente (apertura y cierre) al menos una vez al mes para evitar el “engripamiento” por deposición de sales o incrustaciones, asegurando que estén operativas ante cualquier emergencia.</p></li>
+<li><p><strong>Gestión de registros (Bitácora de operación):</strong> La JASS o el operador responsable deberá llevar un registro diario o semanal en una Bitácora de Operación, donde se consigne la fecha de limpieza, observación de la turbidez del agua, estado del cerco y cualquier anomalía detectada. Este registro es el sustento administrativo para cualquier intervención correctiva futura y es exigido por los entes supervisores de saneamiento rural.</p></li>
+</ul>
+<p>El cumplimiento de este protocolo es responsabilidad directa del operador asignado, siendo vital para salvaguardar la integridad de la red de distribución y asegurar la calidad del agua entregada a la población.</p>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="6_caudales_d.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">6. Caudales de diseño</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="8_conduccion.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diseno-de-la-ptap-las-penas">7.1. Diseño de la PTAP (Las Peñas)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#marco-normativo-y-fundamentacion-tecnologica">7.1.1. Marco normativo y fundamentación tecnológica</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ecuaciones-fundamentales-y-parametros-hidraulicos-base">7.1.2. Ecuaciones fundamentales y parámetros hidráulicos base</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#esquemas-explicativos-del-sistema-de-tratamiento">7.1.3. Esquemas explicativos del sistema de tratamiento</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#descripcion-fisica-quimica-y-operativa-de-las-unidades">7.1.4. Descripción física, química y operativa de las unidades</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desarenador-de-flujo-horizontal">7.1.4.1. Desarenador de flujo horizontal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mezcla-rapida-y-coagulacion-canal-parshall">7.1.4.2. Mezcla rápida y coagulación (canal Parshall)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#floculador-hidraulico-de-pantallas">7.1.4.3. Floculador hidráulico de pantallas</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sedimentador-de-alta-tasa-modulos-de-placas">7.1.4.4. Sedimentador de alta tasa (módulos de placas)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#filtracion-rapida-de-lecho-dual">7.1.4.5. Filtración rápida de lecho dual</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#desinfeccion-final-y-camara-de-contacto">7.1.4.6. Desinfección final y cámara de contacto</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#criterios-de-operacion-mantenimiento-o-m-y-gestion-de-lodos">7.1.5. Criterios de operación, mantenimiento (O&amp;M) y gestión de lodos</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diseno-de-la-captacion-de-fondo-chimbiles">7.2. Diseño de la Captación de Fondo (Chimbiles)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#concepcion-del-diseno-y-sustento-normativo">7.2.1. Concepción del diseño y sustento normativo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#componentes-principales-y-detalles-constructivos">7.2.2. Componentes principales y detalles constructivos</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memoria-de-calculo-hidraulico-estructural">7.2.3. Memoria de cálculo hidráulico-estructural</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#geometria-y-alturas-de-la-camara-humeda">7.2.3.1. Geometría y alturas de la cámara húmeda</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionamiento-de-la-canastilla-de-salida">7.2.3.2. Dimensionamiento de la canastilla de salida</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tuberias-de-rebose-y-limpia">7.2.3.3. Tuberías de rebose y limpia</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#consideraciones-de-operacion-y-mantenimiento-o-m">7.2.4. Consideraciones de operación y mantenimiento (O&amp;M)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ruben Rios
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

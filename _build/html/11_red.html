@@ -1,0 +1,603 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>11. Redes de distribución &#8212; Proyecto IDA</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '11_red';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="12. Descripción de riesgos naturales asociados al sistema" href="12_riesgos.html" />
+    <link rel="prev" title="10. Diseño de la Línea de Aducción" href="10_aduccion.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo_utec.png" class="logo__image only-light" alt="Proyecto IDA - Home"/>
+    <img src="_static/logo_utec.png" class="logo__image only-dark pst-js-only" alt="Proyecto IDA - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    UNIVERSIDAD DE INGENIERÍA Y TECNOLOGÍA (UTEC)
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1_generalidades.html">1. Generalidades</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2_antecedentes.html">2. Antecedentes del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3_resumen.html">3. Resumen del proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4_informe_solicitud.html">4. Informe de solicitud de licencia de uso de agua para el proyecto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5_poblacion_d.html">5. Población de diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6_caudales_d.html">6. Caudales de diseño</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7_ptap_y_captacion_de_fondo.html">7. Diseño y Descripción de la Planta de Tratamiento de Agua Potable (PTAP - Las Peñas) y Captación de Manantial de Fondo (Chimbiles)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8_conduccion.html">8. Diseño de la línea de conducción 1 y 2 (La Peña y Los Chimbiles) hacia el reservorio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9_tanque.html">9. Diseño del tanque de almacenamiento (reservorio)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_aduccion.html">10. Diseño de la Línea de Aducción</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. Redes de distribución</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_riesgos.html">12. Descripción de riesgos naturales asociados al sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_conclusiones.html">13. Conclusiones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_recomendaciones.html">14. Recomendaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_referencias.html">15. Referencias bibliográficas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_calculos.html">16. Memoria de Calculo Excel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_planos.html">17. Planos</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F11_red.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/11_red.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>11. Redes de distribución</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalidades-del-modelo">11.1. Generalidades del modelo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asignacion-de-demandas-nodales">11.2. Asignación de demandas nodales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resultados-de-la-simulacion-hidraulica">11.3. Resultados de la simulación hidráulica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocidades-de-flujo">11.3.1. Velocidades de flujo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diametros-de-tuberias">11.3.2. Diámetros de tuberías</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#presion-estatica">11.3.3. Presión estática</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusiones-parciales-de-la-red">11.4. Conclusiones parciales de la red</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="redes-de-distribucion">
+<h1>11. Redes de distribución<a class="headerlink" href="#redes-de-distribucion" title="Link to this heading">#</a></h1>
+<section id="generalidades-del-modelo">
+<h2>11.1. Generalidades del modelo<a class="headerlink" href="#generalidades-del-modelo" title="Link to this heading">#</a></h2>
+<p>Con la finalidad de evaluar el comportamiento hidráulico del sistema de abastecimiento proyectado para la localidad de Cascas, se desarrolló la modelación de la red de distribución mediante el software <strong>EPANET V2.2</strong>. Esta herramienta permite simular, en régimen permanente, el comportamiento de las variables hidráulicas fundamentales de la red (caudales, velocidades y presiones) a partir de la topología del sistema, los diámetros comerciales asignados a cada tramo y las demandas asignadas en cada nodo de consumo.</p>
+</section>
+<section id="asignacion-de-demandas-nodales">
+<h2>11.2. Asignación de demandas nodales<a class="headerlink" href="#asignacion-de-demandas-nodales" title="Link to this heading">#</a></h2>
+<p>La asignación de las demandas a los nodos de consumo se realizó mediante el <strong>método de los Polígonos de Thiessen</strong>, el cual permite delimitar de manera objetiva el área de influencia correspondiente a cada nodo de la red, considerando la posición relativa de los demás nodos del sistema. Una vez delimitadas dichas áreas de influencia, la demanda asignada a cada nodo se determinó en función de la densidad poblacional (hab/ha) y la dotación de diseño establecida para el sector en estudio, mediante:</p>
+<div class="math notranslate nohighlight">
+\[ Q\,(l/s) = \sum q_i \, (l/s/Ha) \times A_i \, (Ha) \]</div>
+<p>Donde <span class="math notranslate nohighlight">\(q_i\)</span> representa el factor de consumo correspondiente al área de uso (producto de la dotación y la densidad poblacional), <span class="math notranslate nohighlight">\(A_i\)</span> es la superficie del área de influencia del nodo y <span class="math notranslate nohighlight">\(Q\)</span> es la demanda total esperada para dicho nodo.</p>
+<p>El procedimiento contempla, en primer lugar, el cálculo de los polígonos de Thiessen a partir de la red importada desde EPANET y del límite del área en estudio; en segundo lugar, la asignación de las demandas nodales a partir de los datos de dotación y de uso de la tierra (densidades, hab/ha); y, finalmente, la generación de un nuevo archivo de EPANET con las demandas ya incorporadas a cada nodo de consumo.</p>
+<div align="center">
+  <img src="metodologia.png" width="600"><br>
+  <em><strong>Figura 11.1.</strong> Diagrama de flujo para la asignación de demandas nodales.</em>
+</div>
+</section>
+<section id="resultados-de-la-simulacion-hidraulica">
+<h2>11.3. Resultados de la simulación hidráulica<a class="headerlink" href="#resultados-de-la-simulacion-hidraulica" title="Link to this heading">#</a></h2>
+<p>Una vez incorporadas las demandas nodales al modelo y ejecutada la simulación en EPANET, se verificó el cumplimiento de los parámetros hidráulicos exigidos por la normativa vigente, específicamente en lo referido a velocidades de flujo, diámetros mínimos de tuberías principales y presiones estáticas máximas admisibles en la red.</p>
+<div align="center">
+  <img src="velocidades.png" width="600"><br>
+  <em><strong>Figura 11.2.</strong> Velocidades de flujo obtenidas en la simulación de la red en EPANET.</em>
+</div>
+<div align="center">
+  <img src="diametros.png" width="600"><br>
+  <em><strong>Figura 11.3.</strong> Diámetros de las tuberías en EPANET.</em>
+</div>
+<div align="center">
+  <img src="presiones.png" width="600"><br>
+  <em><strong>Figura 11.4.</strong> Presiones en los nodos de la red.</em>
+</div>
+<section id="velocidades-de-flujo">
+<h3>11.3.1. Velocidades de flujo<a class="headerlink" href="#velocidades-de-flujo" title="Link to this heading">#</a></h3>
+<p>La normativa OS.050 establece que la velocidad del flujo en las tuberías de la red de distribución debe mantenerse dentro de un rango comprendido entre <strong>0.6 m/s y 3.0 m/s</strong>, con el propósito de evitar, por un lado, la sedimentación de partículas y el estancamiento del agua en tramos con velocidades excesivamente bajas, y, por otro, el desgaste prematuro de las tuberías, las pérdidas de carga excesivas y los fenómenos de golpe de ariete asociados a velocidades muy altas.</p>
+<p>Los resultados de la simulación evidencian que, si bien la mayor parte de la red cumple con dicho rango normativo, existen tramos puntuales en los que la velocidad no alcanza el valor mínimo exigido. Esta situación puede atribuirse a las siguientes causas:</p>
+<ul class="simple">
+<li><p><strong>Bajo caudal de demanda:</strong> los tramos afectados corresponden, en su mayoría, a sectores con una menor cantidad de viviendas, lo que se traduce en caudales de diseño reducidos e insuficientes para generar velocidades dentro del rango normativo.</p></li>
+<li><p><strong>Tramos terminales o de borde:</strong> corresponden a ramales finales de la red, donde el caudal circulante es mínimo debido a que no existe continuidad de flujo hacia otros tramos aguas abajo.</p></li>
+<li><p><strong>Diámetros sobredimensionados respecto a la demanda real:</strong> en algunos casos, el diámetro comercial mínimo disponible resulta superior al estrictamente necesario para el caudal de diseño del tramo, lo cual reduce la velocidad por debajo del límite inferior.</p></li>
+<li><p><strong>Topología tipo malla cerrada:</strong> en los tramos que forman parte de circuitos cerrados, el caudal tiende a distribuirse entre rutas alternas, de modo que algunos tramos secundarios transportan únicamente un caudal de paso reducido.</p></li>
+</ul>
+</section>
+<section id="diametros-de-tuberias">
+<h3>11.3.2. Diámetros de tuberías<a class="headerlink" href="#diametros-de-tuberias" title="Link to this heading">#</a></h3>
+<p>De acuerdo con los resultados obtenidos, se determinó la necesidad de emplear, en algunos tramos de la red, un diámetro comercial de <strong>50 mm</strong>, valor inferior al diámetro mínimo de <strong>75 mm</strong> exigido por la normativa OS.050 para tuberías principales de un sistema de distribución de agua potable. Esta condición se origina principalmente por las siguientes razones:</p>
+<ul class="simple">
+<li><p>Los tramos en los que se requirió un diámetro de 50 mm corresponden a sectores con una demanda hidráulica reducida, de modo que, desde un punto de vista estrictamente hidráulico, dicho diámetro resultaría suficiente para transportar el caudal requerido.</p></li>
+<li><p>El diámetro mínimo de 75 mm exigido por la norma no responde únicamente a un criterio de capacidad hidráulica, sino también a consideraciones de <strong>seguridad operativa y contra incendios</strong>, así como a la necesidad de garantizar una sección mínima que facilite las labores de mantenimiento y limpieza y reduzca el riesgo de obstrucciones por sedimentos o incrustaciones a lo largo de la vida útil del sistema.</p></li>
+<li><p>La diferencia entre el diámetro teóricamente requerido y el mínimo normativo evidencia que, en estos tramos, prevalece un criterio normativo de seguridad por encima del criterio hidráulico de diseño, lo cual constituye una limitación que debe corregirse en la propuesta final de diámetros comerciales.</p></li>
+</ul>
+<p>En consecuencia, los tramos identificados con diámetro de 50 mm deberán ajustarse a un diámetro comercial mínimo de 75 mm, en cumplimiento estricto de la normativa, aun cuando ello implique sobredimensionar dichos tramos respecto a su requerimiento hidráulico estrictamente calculado.</p>
+</section>
+<section id="presion-estatica">
+<h3>11.3.3. Presión estática<a class="headerlink" href="#presion-estatica" title="Link to this heading">#</a></h3>
+<p>La normativa OS.050 establece que la presión estática máxima admisible en cualquier punto de la red no debe superar los <strong>50 m de columna de agua (m.c.a.)</strong>. Sin embargo, los resultados de la simulación muestran que, en el nodo de menor cota de toda la red, se registra una presión estática de <strong>139.66 m</strong>, valor que supera ampliamente el límite normativo.</p>
+<p>Esta condición se debe fundamentalmente al considerable <strong>desnivel topográfico</strong> existente entre el reservorio y el nodo más bajo de la red, propio de la configuración accidentada del terreno. Al tratarse de un sistema que opera íntegramente por gravedad, la energía potencial generada por dicho desnivel se traduce directamente en un incremento significativo de la presión estática en los puntos más bajos, superando los límites estructurales admisibles para las tuberías y accesorios convencionales. Esta situación obliga a plantear soluciones técnicas para disipar el exceso de carga estática:</p>
+<ul class="simple">
+<li><p><strong>Sectorización de la red en zonas de presión</strong>, de manera que cada sector opere de forma independiente dentro de un rango de presiones admisible, en función de su cota topográfica.</p></li>
+<li><p><strong>Instalación de Válvulas Reductoras de Presión (VRP)</strong> en los tramos o nodos críticos, que disipen el exceso de carga hidráulica antes de que el agua llegue a los sectores más bajos.</p></li>
+<li><p><strong>Implementación de cámaras o tanques rompecarga</strong> en puntos estratégicos del trazado, que rompan la línea piezométrica y reinicien la carga hidráulica disponible en el tramo subsiguiente.</p></li>
+</ul>
+</section>
+</section>
+<section id="conclusiones-parciales-de-la-red">
+<h2>11.4. Conclusiones parciales de la red<a class="headerlink" href="#conclusiones-parciales-de-la-red" title="Link to this heading">#</a></h2>
+<p>A partir de los resultados obtenidos en la modelación hidráulica de la red de distribución, se concluye que el sistema cumple, de manera general, con los parámetros normativos exigidos en cuanto a velocidades de flujo, diámetros y presiones; no obstante, se identifican condiciones puntuales que requieren atención: tramos con velocidades por debajo del mínimo normativo asociados a sectores de baja demanda, tramos cuyo diámetro hidráulicamente requerido resulta inferior al mínimo normativo de 75 mm, y una presión estática en el nodo más bajo de la red que excede significativamente el límite de 50 m.c.a. permitido, como consecuencia directa del marcado desnivel topográfico del área de estudio.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="10_aduccion.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">10. Diseño de la Línea de Aducción</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="12_riesgos.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">12. Descripción de riesgos naturales asociados al sistema</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#generalidades-del-modelo">11.1. Generalidades del modelo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#asignacion-de-demandas-nodales">11.2. Asignación de demandas nodales</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resultados-de-la-simulacion-hidraulica">11.3. Resultados de la simulación hidráulica</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#velocidades-de-flujo">11.3.1. Velocidades de flujo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#diametros-de-tuberias">11.3.2. Diámetros de tuberías</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#presion-estatica">11.3.3. Presión estática</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusiones-parciales-de-la-red">11.4. Conclusiones parciales de la red</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ruben Rios
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
